@@ -15,18 +15,27 @@ SELECT * FROM prison_covid
 CREATE TABLE deaths(
 State VARCHAR,
 Date DATE,
-Cumulative_Prisoner_Deaths FLOAT);
+Cumulative_Prisoner_Deaths FLOAT,
+PRIMARY KEY (State));
+
+SELECT * FROM deaths
 
 --create table prison--
 CREATE TABLE prison(
 State VARCHAR,
 Date DATE,
 Total_Prisoner_Cases FLOAT,
-Total_Prisoner_Deaths FLOAT);
+Total_Prisoner_Deaths FLOAT,
+PRIMARY KEY (State));
+
+SELECT * FROM prison
 
 -- create table states--
 CREATE TABLE states(
 State VARCHAR,
 Date DATE,
 Number_of_Cases INT,
-Number_of_deaths INT);
+Number_of_deaths INT,
+PRIMARY KEY (State));
+
+SELECT * FROM states
