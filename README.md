@@ -13,7 +13,7 @@ we  used three csv files:
 
 ## **T**-ransform -- Data Cleanup & Analysis -- what did we do with it?
 
-* extration of data from three different csv sources
+* extraction of data from three different csv sources
 
  - cleaning columns
  - renaming columns
@@ -21,14 +21,12 @@ we  used three csv files:
  - dropped rows with missing data
  - changed the date format where necesary
  - created indexes on the 3 tables
- - sorted teh columns
+ - sorted the columns
  - saved them in a new CSV file
  - 
 
-* The type of final production database to load the data into (relational or non-relational).
-
-
 ## **L**-oad -- write the data into a database storage (relational or non-relational) -- why was this chosen?
 
+* We used Postgres (SQL relational database) to write our data into database storage. We preferred to have a structural database, organized with tables, as this was easier to work with and sort out errors. Our three CSV files all contained State & Date for the same time period, and thus we saw an opportunity to create dependencies and a more interesting, sortable, and filterable database. 
 
-
+* One of the issues that we had was that we had to use a combination of TWO primary keys to ensure that our data was properly related (State & Date). One CSV file had an extra "State"-- Federal. This had to be dropped in order to create functional dependencies. This is one of the difficulties with relational databases-- the data has to be consistent in input & meaning. Getting into the data, we began to understand why someone would choose to use one over another.
